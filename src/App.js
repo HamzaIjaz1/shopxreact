@@ -7,13 +7,15 @@ import Pane from "./Components/pane";
 import "./Components/Posts.css";
 import "./Components/addProduct.css";
 import "./App.css";
+import { faDivide } from "@fortawesome/free-solid-svg-icons";
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <div>
+        <Pane />
         <Shop />
-      </BrowserRouter>
+      </div>
     );
   }
 }

@@ -14,8 +14,6 @@ class Shop extends Component {
   render() {
     return (
       <div>
-        <Pane />
-
         <button className="btn logout">
           <FontAwesomeIcon icon="sign-out-alt" />
           Logout

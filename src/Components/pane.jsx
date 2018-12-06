@@ -3,45 +3,58 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import logo from "../Images/logo.PNG";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Posts from "./Posts";
+import Messages from "./Messages";
+import Shop from "./shop";
 
 library.add(fas);
 class pane extends Component {
   render() {
     return (
-      <div className="sidenav">
-        <Link to="/Posts">
-          <img className="logo" src={logo} alt="ShopX" />
-        </Link>
-        <a href="../" onClick={(this.state = { page: "posts" })}>
-          <FontAwesomeIcon className="AwesomeIcon" icon="store-alt" />
-          Shop
-        </a>
-        <a href="./addProduct">
-          <FontAwesomeIcon className="AwesomeIcon" icon="shopping-basket" />
-          Products
-        </a>
-        <a href="./Messages">
-          <FontAwesomeIcon className="AwesomeIcon" icon="comments" />
-          Messages
-        </a>
-        <a href="./Posts">
-          <FontAwesomeIcon className="AwesomeIcon" icon="file-alt" />
-          Posts
-        </a>
-        <a href="./Reviews">
-          <FontAwesomeIcon className="AwesomeIcon" icon="star" />
-          Reviews
-        </a>
-        <a href="./Promotions">
-          <FontAwesomeIcon className="AwesomeIcon" icon="tags" />
-          Promotions
-        </a>
-        <a href="./faqs">
-          <FontAwesomeIcon className="AwesomeIcon" icon="question-circle" />
-          FAQ's
-        </a>
-      </div>
+      <Router>
+        <div className="sidenav">
+          <Link to="/">
+            <img className="logo" src={logo} alt="ShopX" />
+          </Link>
+          <Link to="/">
+            <FontAwesomeIcon className="AwesomeIcon" icon="store-alt" />
+            Shop
+          </Link>
+          <Link to="/Product">
+            <FontAwesomeIcon className="AwesomeIcon" icon="shopping-basket" />
+            Products
+          </Link>
+          <Link to="/Messages">
+            <FontAwesomeIcon className="AwesomeIcon" icon="comments" />
+            Messages
+          </Link>
+          <Link to="/Posts">
+            <FontAwesomeIcon className="AwesomeIcon" icon="file-alt" />
+            Posts
+          </Link>
+          <Link to="/Reviews">
+            <FontAwesomeIcon className="AwesomeIcon" icon="star" />
+            Reviews
+          </Link>
+          <Link to="/Promotions">
+            <FontAwesomeIcon className="AwesomeIcon" icon="tags" />
+            Promotions
+          </Link>
+          <Link to="/faqs">
+            <FontAwesomeIcon className="AwesomeIcon" icon="question-circle" />
+            FAQ's
+          </Link>
+
+          <Route exact path="/" Component={Shop} />
+          <Route exact path="/Messages" Component={Messages} />
+          <Route exact path="/Posts" Component={Posts} />
+          <Route exact path="/Products" Component={Posts} />
+          <Route exact path="/faqs" Component={Posts} />
+          <Route exact path="/Reviews" Component={Posts} />
+          <Route exact path="/Promotions" Component={Posts} />
+        </div>
+      </Router>
     );
   }
 }
