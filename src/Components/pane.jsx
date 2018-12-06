@@ -3,58 +3,52 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import logo from "../Images/logo.PNG";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Posts from "./Posts";
-import Messages from "./Messages";
-import Shop from "./shop";
+import { NavLink } from "react-router-dom";
 
 library.add(fas);
 class pane extends Component {
   render() {
     return (
-      <Router>
+      <React.Fragment>
         <div className="sidenav">
-          <Link to="/">
+          <NavLink to="/">
             <img className="logo" src={logo} alt="ShopX" />
-          </Link>
-          <Link to="/">
+          </NavLink>
+          <NavLink to="/Shop">
             <FontAwesomeIcon className="AwesomeIcon" icon="store-alt" />
             Shop
-          </Link>
-          <Link to="/Product">
+          </NavLink>
+          <NavLink to="/Product">
             <FontAwesomeIcon className="AwesomeIcon" icon="shopping-basket" />
             Products
-          </Link>
-          <Link to="/Messages">
+          </NavLink>
+          <NavLink to="/Messages">
             <FontAwesomeIcon className="AwesomeIcon" icon="comments" />
             Messages
-          </Link>
-          <Link to="/Posts">
+          </NavLink>
+          <NavLink to="/Posts">
             <FontAwesomeIcon className="AwesomeIcon" icon="file-alt" />
             Posts
-          </Link>
-          <Link to="/Reviews">
+          </NavLink>
+          <NavLink to="/Reviews">
             <FontAwesomeIcon className="AwesomeIcon" icon="star" />
             Reviews
-          </Link>
-          <Link to="/Promotions">
+          </NavLink>
+          <NavLink to="/Promotions">
             <FontAwesomeIcon className="AwesomeIcon" icon="tags" />
             Promotions
-          </Link>
-          <Link to="/faqs">
+          </NavLink>
+          <NavLink to="/faqs">
             <FontAwesomeIcon className="AwesomeIcon" icon="question-circle" />
             FAQ's
-          </Link>
-
-          <Route exact path="/" Component={Shop} />
-          <Route exact path="/Messages" Component={Messages} />
-          <Route exact path="/Posts" Component={Posts} />
-          <Route exact path="/Products" Component={Posts} />
-          <Route exact path="/faqs" Component={Posts} />
-          <Route exact path="/Reviews" Component={Posts} />
-          <Route exact path="/Promotions" Component={Posts} />
+          </NavLink>
         </div>
-      </Router>
+
+        <button className="btn logout">
+          <FontAwesomeIcon icon="sign-out-alt" />
+          Logout
+        </button>
+      </React.Fragment>
     );
   }
 }

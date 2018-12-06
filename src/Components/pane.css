@@ -14,7 +14,7 @@
 }
 
 .sidenav a {
-  padding-left: 16px;
+  padding-left: 25px;
   padding-top: 6px;
   padding-bottom: 6px;
   text-decoration: none;
@@ -23,8 +23,12 @@
   display: block;
 }
 
+.sidenav a.active {
+  color: #2c7be5;
+}
+
 .logo {
-  width: 225px;
+  width: 210px;
 }
 
 .heading-color {

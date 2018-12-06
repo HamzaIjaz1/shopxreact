@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Pane from "../Components/pane";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Posts.css";
+import shopImg from "../Images/img1.jpg";
+import shopImg2 from "../Images/img2.png";
 
 class Posts extends Component {
   state = {};
@@ -46,7 +48,7 @@ class Posts extends Component {
                 recusandae sed vero?
               </p>
 
-              <img class="card-img-bottom" src="../Images/img1.jpg" alt="img" />
+              <img class="card-img-bottom" src={shopImg} alt="img" />
 
               <div class="date">
                 13/10/2018
@@ -70,7 +72,7 @@ class Posts extends Component {
                 recusandae sed vero?
               </p>
 
-              <img class="card-img-bottom" src="../Images/img2.png" alt="img" />
+              <img class="card-img-bottom" src={shopImg2} alt="img" />
 
               <div class="date">
                 13/10/2018
