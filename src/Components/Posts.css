@@ -1,16 +1,16 @@
-.inputbuttons{
-    padding: 10px;
-    background: whitesmoke;
-    width: 100%;
-    margin-top: 5px;
+.inputbuttons {
+  padding: 10px;
+  background: whitesmoke;
+  width: 100%;
+  margin-top: 5px;
 }
-.date{
-    margin-left: 92%;
-    color: #545b62;
+.date {
+  margin-left: 92%;
+  color: #545b62;
 }
-.card-div{
- margin-top: 10px;
+.card-div {
+  margin-top: 10px;
 }
-.active{
-    color:white;
+.active {
+  color: white;
 }
