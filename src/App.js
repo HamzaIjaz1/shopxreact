@@ -4,6 +4,8 @@ import Posts from "./Components/Posts";
 import sMessages from "./Components/Messages";
 import Reviews from "./Components/Reviews";
 import ViewProduct from "./Components/ViewProducts";
+import Register from "./Components/Register";
+import Login from "./Components/Login";
 import { BrowserRouter, Route } from "react-router-dom";
 import Pane from "./Components/pane";
 import "./Components/MessagesStyle.css";
@@ -25,6 +27,8 @@ class App extends Component {
           <Route path="/faqs" component={Posts} />
           <Route path="/Reviews" component={Reviews} />
           <Route path="/Promotions" component={Posts} />
+          <Route path="/register" component={Register}/>
+          <Route path="/login" component={Login}/>
         </div>
       </BrowserRouter>
     );

@@ -42,6 +42,17 @@ class pane extends Component {
             <FontAwesomeIcon className="AwesomeIcon" icon="question-circle" />
             FAQ's
           </NavLink>
+
+          <NavLink to="/register">
+            <FontAwesomeIcon className="AwesomeIcon" icon="user-plus" />
+            Register
+          </NavLink>
+
+           <NavLink to="/login">
+            <FontAwesomeIcon className="AwesomeIcon" icon="sign-in-alt" />
+            Login
+          </NavLink>
+
         </div>
 
         <button className="btn logout">
