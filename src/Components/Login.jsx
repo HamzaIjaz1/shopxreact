@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,Redirect } from 'react-router-dom';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import Pane from "./pane";
+import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
 
 class Login extends Component {
+
+state={
+  redirect: false,
+  isActive:true
+}
+
+redirectTo = ()=>{
+  this.setState({redirect:true});
+  this.setState({isActive:false});
+}
+
+letsgo = () =>{
+  if (this.state.redirect){
+    return <Redirect to="/pane"></Redirect>
+  }
+}
+
+
   render() {
     return (
       <div className="app flex-row align-items-center">
@@ -33,7 +53,8 @@ class Login extends Component {
                       </InputGroup>
                       <Row>
                         <Col xs="6">
-                          <Button color="primary" className="px-4">Login</Button>
+                        {this.letsgo()}
+                          <Button color="primary" className="px-4" onClick={this.redirectTo}>Login</Button>
                         </Col>
                         <Col xs="6" className="text-right">
                           <Button color="link" className="px-0">Forgot password?</Button>
