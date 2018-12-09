@@ -1,0 +1,35 @@
+tr a {
+  display: contents;
+  color: black;
+}
+
+tr a:active {
+  text-decoration: none;
+}
+
+tr:hover {
+  background-color: #f4f4f4;
+  text-decoration: none;
+}
+
+th:hover {
+  background-color: white;
+  cursor: pointer;
+}
+th {
+  background-color: #eff3f5;
+}
+tr a:hover {
+  text-decoration: none;
+}
+
+.table {
+  background-color: white;
+  margin-bottom: 0;
+}
+
+.myborder {
+  border: 5px solid #edf2f9;
+  border-radius: 0.5rem;
+  margin-bottom: 2%;
+}

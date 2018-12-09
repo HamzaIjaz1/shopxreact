@@ -12,6 +12,8 @@ import "./Components/MessagesStyle.css";
 import "./Components/Posts.css";
 import "./Components/addProduct.css";
 import "./App.css";
+import AddProduct from "./Components/addProduct";
+import FAQ from "./Components/faq";
 
 class App extends Component {
   render() {
@@ -20,15 +22,14 @@ class App extends Component {
         <div>
           <Pane />
           <Route exact path="/" component={Shop} />
-          <Route exact path="/Shop" component={Shop} />
+          <Route path="/add_product" component={AddProduct} />
+          <Route path="/Shop" component={Shop} />
           <Route path="/Messages" component={sMessages} />
           <Route path="/Posts" component={Posts} />
           <Route path="/Product" component={ViewProduct} />
-          <Route path="/faqs" component={Posts} />
+          <Route path="/FAQs" component={FAQ} />
           <Route path="/Reviews" component={Reviews} />
           <Route path="/Promotions" component={Posts} />
-          <Route path="/register" component={Register}/>
-          <Route path="/login" component={Login}/>
         </div>
       </BrowserRouter>
     );

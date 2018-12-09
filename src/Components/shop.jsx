@@ -4,7 +4,8 @@ import shopImg from "../Images/shop.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { Card, CardBody, CardHeader } from "reactstrap";
+
+import "bootstrap/dist/css/bootstrap.css";
 // import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 
 library.add(fas);
