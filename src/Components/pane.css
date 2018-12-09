@@ -8,7 +8,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: #161616;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -19,7 +19,7 @@
   padding-bottom: 6px;
   text-decoration: none;
   font-size: 25px;
-  color: #333333;
+  color: #888888;
   display: block;
 }
 

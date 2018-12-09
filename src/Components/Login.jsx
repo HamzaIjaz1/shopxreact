@@ -14,8 +14,23 @@ import {
   InputGroupText,
   Row
 } from "bootstrap/dist/css/bootstrap.css";
-
 class Login extends Component {
+  state = {
+    redirect: false,
+    isActive: true
+  };
+
+  redirectTo = () => {
+    this.setState({ redirect: true });
+    this.setState({ isActive: false });
+  };
+
+  letsgo = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/pane" />;
+    }
+  };
+
   render() {
     return (
       <div className="app flex-row align-items-center">
