@@ -13,6 +13,8 @@ import "./Components/MessagesStyle.css";
 import "./Components/Posts.css";
 import "./Components/addProduct.css";
 import "./App.css";
+import AddProduct from "./Components/addProduct";
+import FAQ from "./Components/faq";
 
 class App extends Component {
   render() {

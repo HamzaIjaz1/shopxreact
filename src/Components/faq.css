@@ -1,0 +1,19 @@
+#accordion {
+  width: 900px;
+}
+
+.card h3 span {
+  float: right;
+}
+
+.card svg {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.card h3 a {
+  display: block;
+}
+
+.card h3 {
+  color: #17a2b8;
+}

@@ -1,35 +1,50 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/js/dist/tooltip.js";
+import uploadImg from "../Images/upload.png";
+import $ from "jquery";
 
 class AddProduct extends Component {
   state = {};
+
+  componentDidMount() {
+    $('[data-toggle="tooltip"]').tooltip();
+  }
+
+  componentDidUpdate() {
+    $('[data-toggle="tooltip"]').tooltip();
+  }
+
   render() {
     return (
-      <div class="container">
-        <div class="card card-div border-0">
-          <div class="card-body">
-            <div class="form-group">
-              <h3 class="card-header">Add Product</h3>
-              <div id="titlediv" class="input-group">
+      <div className="container">
+        <div className="card">
+          <h3 className="card-header text-center border-bottom-0">
+            Add Product
+          </h3>
+          <div className="card-body">
+            <div className="form-group">
+              <div id="titlediv" className="input-group">
                 <input
                   id="titleinput"
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="Title"
                   size="4"
-                  placeholder="Add Product Title"
+                  placeholder="Product Title..."
                 />
               </div>
               <textarea
-                class="form-control text-body"
+                className="form-control text-body"
                 rows="5"
                 id="comment"
-                placeholder="Write your Post"
+                placeholder="Write Product Description..."
               />
-              <div class="form-group row">
+              <div className="form-group row">
                 <select
                   name="category"
                   id="category"
-                  class="form-control col-2 "
+                  className="form-control col-2 "
                   placeholder="Select Category"
                 >
                   <option value="Category1">Category1</option>
@@ -38,52 +53,74 @@ class AddProduct extends Component {
                   <option value="Category4">Category4</option>
                 </select>
 
-                <input
-                  type="text"
-                  placeholder="Enter Price"
-                  name="Price"
-                  class="form-control col-2 "
-                  id="price"
-                />
-              </div>
-              <div id="upload" class="card">
-                <div class="card-header">
-                  <h3>Add pictures</h3>
-                </div>
-                <div class="card-body">
-                  <div class="text-center">
-                    <a href="#" />>
-                    <img
-                      src="../Images/image-placeholder.png"
-                      class="img-fluid"
-                      alt="Upload Image"
-                    />
+                <div class="input-group w-75" id="price">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Rs</div>
                   </div>
+                  <input
+                    type="text"
+                    placeholder="Enter Price"
+                    name="Price"
+                    className="form-control col-2"
+                  />
+                </div>
+              </div>
+              <div id="upload" className="card">
+                <div className="card-header">
+                  <h3>Images</h3>
+                </div>
+                <div className="card-body text-center">
+                  <div class="image-upload">
+                    <label for="file-input">
+                      <img
+                        src={uploadImg}
+                        style={{ cursor: "pointer" }}
+                        alt="Upload Image"
+                        className="img-fluid w-25"
+                        data-toggle="tooltip"
+                        title="Click to upload..."
+                      />
+                    </label>
 
-                  <button
-                    class="btn btn-secondary"
-                    formaction="submit"
-                    name="submit"
-                    id="submitButton"
-                  >
-                    Upload
-                  </button>
+                    <input id="file-input" type="file" />
+                  </div>
                 </div>
               </div>
               <input
                 type="text"
                 placeholder="Enter tags"
-                class="form-control"
+                className="form-control"
               />
+            </div>
+          </div>
+          <div className="inputbuttons card-footer border-0 p-3 pl-4 pr-4">
+            <div className="row">
+              <div className="col-md-4">
+                <span className="form-group">
+                  <label for="sel1">Visibility:</label>
+                  <select
+                    className="form-control"
+                    id="sel1"
+                    style={{
+                      display: "inline",
+                      width: "unset",
+                      margin: "0 1rem"
+                    }}
+                  >
+                    <option>Public</option>
+                    <option>Hidden</option>
+                  </select>
+                </span>
+              </div>
 
-              <div class="inputbuttons">
+              <div className="col-md-8 text-right">
                 <button
-                  class="btn btn-primary"
+                  className="btn btn-lg btn-primary"
                   formaction="submit"
                   name="submit"
                   id="submitButton"
                 >
-                  Post
+                  Publish
                 </button>
               </div>
             </div>
