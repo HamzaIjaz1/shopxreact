@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link,Redirect } from 'react-router-dom';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-import Pane from "./pane";
+import PaneRoutes from "./paneroutes";
 import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
 
 class Login extends Component {
