@@ -12,7 +12,7 @@ class pane extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar flex-lg-column navbar-expand-lg navbar-light bg-light rounded">
+        <nav className="navbar flex-lg-column navbar-expand-lg rounded">
           <button
             className="navbar-toggler collapsed"
             type="button"
@@ -60,10 +60,10 @@ class pane extends Component {
               <FontAwesomeIcon className="AwesomeIcon" icon="star" />
               Reviews
             </NavLink>
-            <NavLink to="/Promotions">
+            {/* <NavLink to="/Promotions">
               <FontAwesomeIcon className="AwesomeIcon" icon="tags" />
               Promotions
-            </NavLink>
+            </NavLink> */}
             <NavLink to="/FAQs">
               <FontAwesomeIcon className="AwesomeIcon" icon="question-circle" />
               FAQ's

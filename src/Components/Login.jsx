@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import {
   Button,
   Card,
@@ -13,7 +13,10 @@ import {
   InputGroupAddon,
   InputGroupText,
   Row
-} from "bootstrap/dist/css/bootstrap.css";
+} from "reactstrap";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 class Login extends Component {
   state = {
     redirect: false,
@@ -35,6 +38,11 @@ class Login extends Component {
     return (
       <div className="app flex-row align-items-center">
         <Container>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <Row className="justify-content-center">
             <Col md="8">
               <CardGroup>
@@ -46,7 +54,7 @@ class Login extends Component {
                       <InputGroup className="mb-3">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="icon-user" />
+                            <FontAwesomeIcon icon="user" />
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
@@ -58,7 +66,7 @@ class Login extends Component {
                       <InputGroup className="mb-4">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
-                            <i className="icon-lock" />
+                            <FontAwesomeIcon icon="lock" />
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
@@ -69,7 +77,12 @@ class Login extends Component {
                       </InputGroup>
                       <Row>
                         <Col xs="6">
-                          <Button color="primary" className="px-4">
+                          {this.letsgo()}
+                          <Button
+                            color="primary"
+                            className="px-4"
+                            onClick={this.redirectTo}
+                          >
                             Login
                           </Button>
                         </Col>

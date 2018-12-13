@@ -12,13 +12,24 @@ import {
   InputGroupAddon,
   InputGroupText,
   Row
-} from "bootstrap/dist/css/bootstrap.css";
+} from "reactstrap";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Register extends Component {
   render() {
     return (
       <div className="app flex-row align-items-center">
         <Container>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <br />
+          <br />
+          <br />
           <Row className="justify-content-center">
             <Col md="9" lg="7" xl="6">
               <Card className="mx-4">
@@ -29,7 +40,7 @@ class Register extends Component {
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-user" />
+                          <FontAwesomeIcon icon="user" />
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
@@ -51,7 +62,7 @@ class Register extends Component {
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-lock" />
+                          <FontAwesomeIcon icon="lock" />
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
@@ -63,7 +74,7 @@ class Register extends Component {
                     <InputGroup className="mb-4">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="icon-lock" />
+                          <FontAwesomeIcon icon="lock" />
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input

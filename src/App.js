@@ -23,6 +23,7 @@ class App extends Component {
           <div>
             <Pane />
             <Route exact path="/" component={Shop} />
+            <Route path="/pane" component={Shop} />
             <Route path="/add_product" component={AddProduct} />
             <Route path="/Shop" component={Shop} />
             <Route path="/Messages" component={sMessages} />
@@ -30,7 +31,6 @@ class App extends Component {
             <Route path="/Product" component={ViewProduct} />
             <Route path="/FAQs" component={FAQ} />
             <Route path="/Reviews" component={Reviews} />
-            <Route path="/Promotions" component={Posts} />
           </div>
         </BrowserRouter>
       </React.Fragment>
