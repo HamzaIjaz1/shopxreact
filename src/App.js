@@ -8,6 +8,7 @@ import Register from "./Components/Register";
 import Login from "./Components/Login";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Pane from "./Components/pane";
+import AuthRoutes from "./Components/authroutes";
 import "./Components/MessagesStyle.css";
 import "./Components/Posts.css";
 import "./Components/addProduct.css";
@@ -19,20 +20,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <BrowserRouter>
-          <div>
-            <Pane />
-            <Route exact path="/" component={Shop} />
-            <Route path="/pane" component={Shop} />
-            <Route path="/add_product" component={AddProduct} />
-            <Route path="/Shop" component={Shop} />
-            <Route path="/Messages" component={sMessages} />
-            <Route path="/Posts" component={Posts} />
-            <Route path="/Product" component={ViewProduct} />
-            <Route path="/FAQs" component={FAQ} />
-            <Route path="/Reviews" component={Reviews} />
-          </div>
-        </BrowserRouter>
+        <AuthRoutes />
       </React.Fragment>
     );
   }
