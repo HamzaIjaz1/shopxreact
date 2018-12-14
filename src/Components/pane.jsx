@@ -1,38 +1,35 @@
 import React, { Component } from 'react';
-import Shop from "./shop";
+import {NavLink,NavNavLink} from "react-router-dom";
 class pane extends Component {
     state = {  }
     
     render() { 
         return (    <div className="sidenav">
-        <a id="temporary"  id="shopbutton" onClick={this.Shop()}>
+        <NavLink to="/shop"  id="shopbutton" >
           <i class="fas fa-store-alt" />Shop
-        </a>
-        <a  id="Products">
+        </NavLink>
+        <NavLink  to="/addproducts" id="Products">
           <i className="fas fa-shopping-basket" />Products
-        </a>
-        <a  id="Messages">
+        </NavLink>
+        <NavLink to="/messages" id="Messages">
           <i className="fas fa-comments" />Messages
-        </a>
-        <a  id="Posts">
+        </NavLink>
+        <NavLink to="/posts" id="Posts">
           <i className="fas fa-file-alt" />Posts
-        </a>
-        <a  id="Reviews">
+        </NavLink>
+        <NavLink to="/Reviews" id="Reviews">
           <i className="fas fa-star" />Reviews
-        </a>
-        <a  id="Promotions">
+        </NavLink>
+        <NavLink to="/viewporducts" id="Promotions">
           <i className="fas fa-tags" />Promotions
-        </a>
-        <a  id="FAQS">
-          {" "}
+        </NavLink>
+        <NavLink to="/addproducts" id="FAQS">
           <i className="fas fa-question-circle" />FAQ's
-        </a>
+        </NavLink>
       </div>  );
     }
 
-    Shop(){
-//<Shop></Shop>
-    }
+  
 }
  
 export default pane;
