@@ -19,17 +19,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class Register extends Component {
   render() {
     return (
-      <div className="app flex-row align-items-center">
+      <div className="app flex-row align-items-center" margin-top="10%">
         <Container>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-
-          <br />
-          <br />
-          <br />
+          
           <Row className="justify-content-center">
             <Col md="9" lg="7" xl="6">
               <Card className="mx-4">
