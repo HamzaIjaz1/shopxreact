@@ -4,10 +4,9 @@ import Posts from "./Posts";
 import sMessages from "./Messages";
 import Reviews from "./Reviews";
 import ViewProduct from "./ViewProducts";
-import Register from "./Register";
-import Login from "./Login";
+import AddProduct from "./addProduct";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Pane from "./pane";
+import PaneStrap from "./panestrap";
 import "./MessagesStyle.css";
 import "./Posts.css";
 import "./addProduct.css";
@@ -18,12 +17,13 @@ class PaneRoutes extends Component {
         return (  
             <BrowserRouter>
             <div>
-                <Pane/>
+                <PaneStrap/>
                 {/* <Route path="/pane" component={Pane}/> */}
               <Route path="/Shop" component={Shop} />
               <Route path="/Messages" component={sMessages} />
               <Route path="/Posts" component={Posts} />
-              <Route path="/Product" component={ViewProduct} />
+              <Route path="/ViewProduct" component={ViewProduct} />
+              <Route path="/Add" component={AddProduct} />
               <Route path="/faqs" component={Posts} />
               <Route path="/Reviews" component={Reviews} />
               <Route path="/Promotions" component={Posts} />

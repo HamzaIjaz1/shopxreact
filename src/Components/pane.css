@@ -3,10 +3,8 @@
 }
 .sidenav {
   height: 100%;
-  width: 255px;
+  width: auto;
   position: fixed;
-  z-index: 1;
-  top: 0;
   left: 0;
   background-color: White;
   color: black;
@@ -15,27 +13,13 @@
 }
 
 .sidenav a {
-  padding-left: 25px;
+  padding-left: 15px;
   padding-top: 6px;
   padding-bottom: 6px;
   text-decoration: none;
   font-size: 25px;
   color: #888888;
   display: block;
-}
-
-.addBtn {
-  font-size: 1.5em;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  border-radius: 0.375rem;
-  background-color: #2c7be5;
-  border: 1px solid transparent;
-}
-
-.addBtn:hover {
-  background-color: #1a68d1;
 }
 
 .sidenav a.active {
@@ -67,6 +51,7 @@
 
 .logout {
   position: relative;
+  top:0;
   margin-left: 90%;
 }
 
@@ -207,4 +192,9 @@ ul {
 #product {
   width: 20rem;
   padding: 10px;
+}
+
+#ham{
+  width:50px;
+  height: 50px;
 }
