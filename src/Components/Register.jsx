@@ -21,7 +21,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class Register extends Component {
 
 
-nextStep(){
+// nextStep(){
   // render() {
   //   return (
   //     <div>
@@ -29,7 +29,7 @@ nextStep(){
   //     </div>
   //   );
   // } 
-}
+// }
 
   render() {
     return (

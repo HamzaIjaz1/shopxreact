@@ -38,7 +38,7 @@ class PaneStrap extends Component {
       <div>
                 <img src={hamicon} onClick={this.toggleNavbar} id="ham"></img>
 
-        <Nav
+        <Nav sm="4"
           id="panebar"
           className="sidenav"
           vertical

@@ -25,6 +25,13 @@ body{background:#337AB7;}
     float:left;
   margin-left: 30px;
 }
+.bar{
+  background: #337AB7;
+  height: 10px auto;
+}
+.newmessage{
+  width: 80%;
+}
 /* .msg-left:before {
    width: 0;
     height: 0;
