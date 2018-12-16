@@ -11,24 +11,49 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupText,
-  Row
+  Row,
+  Nav,
+  NavItem
 } from "reactstrap";
-
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Register extends Component {
+
+
+nextStep(){
+  // render() {
+  //   return (
+  //     <div>
+
+  //     </div>
+  //   );
+  // } 
+}
+
   render() {
     return (
-      <div className="app flex-row align-items-center" margin-top="10%">
+      <div className="app flex-row align-items-center">
         <Container>
-          
+          <Nav>
+            <NavItem>
+              <NavLink to="#">Step 1</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="#">Step 2</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="#">Finish</NavLink>
+            </NavItem>
+          </Nav>
+
           <Row className="justify-content-center">
             <Col md="9" lg="7" xl="6">
               <Card className="mx-4">
                 <CardBody className="p-4">
                   <Form>
                     <h1>Register</h1>
-                    <p className="text-muted">Create your account</p>
+                    <p className="text-muted">Create public profile for your shop</p>
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
@@ -75,7 +100,80 @@ class Register extends Component {
                         autoComplete="new-password"
                       />
                     </InputGroup>
-                    <Button color="success" block>
+          
+                    <InputGroup className="mb-4">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <FontAwesomeIcon icon="phone" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="tel"
+                        placeholder="Enter Store Number"                   
+                      />
+                    </InputGroup>
+
+                    <InputGroup className="mb-4">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <FontAwesomeIcon icon="map" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="address"
+                        placeholder="Enter Store address"                   
+                      />
+                    </InputGroup>
+                    
+
+                    <InputGroup className="mb-4">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <FontAwesomeIcon icon="clock" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="phone"
+                        placeholder="Enter Store opening Time"                   
+                      />
+                    </InputGroup>
+
+                    <InputGroup className="mb-4">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <FontAwesomeIcon icon="clock" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="phone"
+                        placeholder="Enter Store closing Time"                   
+                      />
+                    </InputGroup>
+
+                    <InputGroup className="mb-4">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <FontAwesomeIcon icon="category" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="text"
+                        placeholder="Enter Category e.g clothing"                   
+                      />
+                    </InputGroup>
+
+                    <InputGroup className="mb-4">
+                      <span className="align-center">
+                        <Input
+                        type="checkbox"                  
+                      />
+                      Opens Sunday
+                      </span>
+                      
+
+                    </InputGroup>
+
+                    <Button color="success" block onClick={this.nextStep()}>
                       Create Account
                     </Button>
                   </Form>

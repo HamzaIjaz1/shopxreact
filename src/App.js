@@ -5,6 +5,7 @@ import "./App.css";
 import "./Components/chatstyle.css";
 import Chat from './Components/chat';
 import Register from "./Components/Register";
+import {BrowserRouter} from "react-router-dom"
 
 class App extends Component {
   render() {
@@ -12,7 +13,9 @@ class App extends Component {
       <React.Fragment>
         {/* <AuthRoutes/>   */}
         {/* <Chat></Chat> */}
-<Register/>
+        <BrowserRouter>
+        <Register/>
+        </BrowserRouter>
       </React.Fragment>
     );  
   }
