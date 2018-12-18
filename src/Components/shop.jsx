@@ -12,7 +12,10 @@ import {
   Form,
   Button,
   Row,
-  Col
+  Col,
+  InputGroupAddon,
+  InputGroupText,
+  Input
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 // import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
@@ -49,21 +52,82 @@ class Shop extends Component {
           </CardHeader>
           <CardBody>
             
-
             {this.state.edit && 
             <div>
               <Button btn-primary onClick={this.toggleEdit}>Save Details</Button>
-            <form>
-              <label>enter info</label>
-              <input type="text"></input>
-            </form>
+            <Form>
+            <InputGroup className="mb-4">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <FontAwesomeIcon icon="phone" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="tel"
+                        placeholder="Enter Store Number"                   
+                      />
+                    </InputGroup>
+                    <InputGroup className="mb-4">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <FontAwesomeIcon icon="clock" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="phone"
+                        placeholder="Enter Store opening Time"                   
+                      />
+                    </InputGroup>
+
+                    <InputGroup className="mb-4">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <FontAwesomeIcon icon="clock" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        type="phone"
+                        placeholder="Enter Store closing Time"                   
+                      />
+                    </InputGroup>
+                    
+                    <InputGroup className="mb-4" style={{marginLeft:"20px"}}>
+                      <span className="align-center">
+                        <Input
+                        type="checkbox"                  
+                      />
+                      Opens Sunday
+                      </span>
+                      
+                    </InputGroup>
+                    <InputGroup className="mb-4" style={{marginLeft:"20px"}}>
+                      <span className="align-center">
+                        <Input type="checkbox" />
+                        Wifi
+                      </span>
+                    </InputGroup>
+
+                    <InputGroup className="mb-4" style={{marginLeft:"20px"}}>
+                      <span className="align-center">
+                        <Input type="checkbox" />
+                        Wheel Chair Accessible
+                      </span>
+                    </InputGroup>
+
+                    <InputGroup className="mb-4" style={{marginLeft:"20px"}}>
+                      <span className="align-center">
+                        <Input type="checkbox" />
+                        RestRoom
+                      </span>
+                    </InputGroup>
+            </Form>
             </div>
             }
             {!this.state.edit &&
             <div>
 <Button btn-primary onClick={this.toggleEdit}>Edit Details</Button>
               <Row>
-                <Col xs="6">
+                <Col xs="6" style={{fontWeight:"bold"}}>
                   <div>Store Type</div>
                   <div>Contact</div>
                   <div>Opening Time</div>

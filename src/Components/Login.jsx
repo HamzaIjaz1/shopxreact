@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
-import back from "../Images/background2.jpg"
+import back from "../Images/background2.jpg";
 import {
   Button,
   Card,
@@ -105,7 +105,7 @@ class Login extends Component {
                     <div>
                       <h2>Sign up</h2>
                       <p>
-                        Welcome to Shopping Guide's store login.
+                        Register your shop now attract more customers.
                       </p>
                       <Link to="/register">
                         <Button

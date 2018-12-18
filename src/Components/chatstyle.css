@@ -1,12 +1,13 @@
-.conversation{
-margin-top: 10%;
-
+.conversationnpm {
+overflow-y:scroll;
+border-right: solid;
 }
-body{background:#337AB7;}
 #chat{
-    /* overflow-y: scroll; */
+  overflow-y: scroll;
   background:#fff;
+  max-height: 700px;
 }
+
 .msg-right{
     background:#3BA1EE;
     padding:10px;
@@ -16,6 +17,8 @@ body{background:#337AB7;}
     width:70%;
     float:right;
   margin-right: 30px;
+  height: auto;
+
 }
 .msg-left{
     background:#ddd;
@@ -24,36 +27,32 @@ body{background:#337AB7;}
      width:70%;
     float:left;
   margin-left: 30px;
+  height: auto;
 }
 .bar{
   background: #337AB7;
   height: 10px auto;
+  color: whitesmoke;
+  font-size: 25px;
 }
 .newmessage{
-  width: 80%;
+position: relative;
+bottom: 5%;
 }
-/* .msg-left:before {
-   width: 0;
-    height: 0;
-    content: "";
-    top: 9px;
-    left: -28px;
-    position: relative;
-    border-style: solid;
-    border-width: 20px 0px 0px 20px;
-    border-color: #ddd transparent transparent transparent;
-   
+#cardheader{
+  text-align: center;
 }
-.msg-right:after {
-   width: 0;
-    height: 0;
-    content: "";
-    top: 9px;
-    left: 29px;
-    position: relative;
-    border-style: solid;
-    border-width: 20px 20px 00px 0px;
-    border-color: #3BA1EE transparent transparent transparent;
-  
-   
-} */
+#maincard{
+   width: 75%;
+   margin-left: 15%;
+    height: 90% ;
+}
+#placeholder{
+  width:50px;
+  height:50px;
+}
+
+#datetime{
+  margin-left: 80%;
+  color: grey
+}
