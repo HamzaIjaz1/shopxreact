@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
+import back from "../Images/background2.jpg"
 import {
   Button,
   Card,
@@ -36,6 +37,7 @@ class Login extends Component {
 
   render() {
     return (
+      <div style={{backgroundImage: 'url('+back+')', height:"100%",margin:0}}>      
       <div className="app flex-row align-items-center">
         <Container>
           <br />
@@ -122,6 +124,25 @@ class Login extends Component {
             </Col>
           </Row>
         </Container>
+        <br />
+          <br />
+          <br />
+          <br />
+          <br /> <br />
+          <br />
+          <br />
+          <br />
+          <br /> <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+      </div>
       </div>
     );
   }

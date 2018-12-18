@@ -1,11 +1,25 @@
 import React, { Component } from "react";
-import { Media, Row, Col, Container, InputGroup, Button } from "reactstrap";
+import { Media, Row, Col, Container, InputGroup } from "reactstrap";
 class Chat extends Component {
  
-
+inputreply="";
  constructor(props){
-super(props);
+   super(props);
+this.handleChange = this.handleChange.bind(this);
+this.handleSubmit = this.handleSubmit.bind(this);
 }
+handleChange(event) {
+  this.setState({newreply: event.target.value});
+  this.inputreply=event.target.value;
+}
+
+handleSubmit(event) {
+  var str={msg:this.inputreply,reply:""};
+  this.state.conversation.push(str);
+  this.setState({conversation:this.state.conversation});
+  event.preventDefault();
+}
+
 
  componentWillMount(){
    //api call
@@ -24,14 +38,16 @@ super(props);
       {msg:"three",reply:"four"},
       {msg:"five",reply:"six"},
       {msg:"seven",reply:"eight"}
-    ]
+    ],
+    newreply:""
   };
 
 
   render() {
-    
 
     return (
+      <div>
+        
       <Container>
         <Row>
           <Col xs="3">
@@ -62,27 +78,37 @@ super(props);
           <div className="bar">{this.state.Username}</div>
           {this.state.conversation.map(element => (
              <div id="chat">
-             <div left className="msg-right">
+            {element.msg &&
+              <div left className="msg-right">
                {element.msg}
              </div>
-             <div right className="msg-left">
-               {element.reply}
+             }
+             {element.reply &&
+              <div right className="msg-left">
+               {elemenpm
+                nt.reply}
              </div>
-           
-           </div>
+             }
+             </div>
            ) )}
-              <InputGroup>
+           <form onSubmit={this.handleSubmit}>
+           <InputGroup>
                <input
                  type="textarea"
                  placeholder="Enter your message"
                  id="newmessage"
+                 value={this.state.newreply}
+                 onChange={this.handleChange}
                />
-               <Button className="btn btn-primary">Send</Button>
+               <input type="submit" value="submit" className="btn btn-primary"/>
              </InputGroup>
+           </form>
+             
            
           </Col>
         </Row>
       </Container>
+      </div>
     );
   }
 }

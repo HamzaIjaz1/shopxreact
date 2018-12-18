@@ -4,7 +4,16 @@ import shopImg from "../Images/shop.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import {Card, CardHeader, CardBody,InputGroup, Form, Button, Row, Col} from 'reactstrap';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  InputGroup,
+  Form,
+  Button,
+  Row,
+  Col
+} from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 // import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 
@@ -12,63 +21,77 @@ library.add(fas);
 
 class Shop extends Component {
   state = {
-    StoreName:"Raheem Store",
-    Contact:"+92-xxx-xxxxxxx",
-    StoreType:"Clothing",
-    OpeningTime:"10 am",
-    ClosingTime:"10 pm",
-    OpensonWeekend:"yes",
-    AcceptsCard:"no",
-    Wifi:"no",
-    Delivery:"yes",
-    Address:"SHop no. 65 5th street"
+    StoreName: "Raheem Store",
+    Contact: "+92-xxx-xxxxxxx",
+    StoreType: "Clothing",
+    OpeningTime: "10 am",
+    ClosingTime: "10 pm",
+    OpensonWeekend: "yes",
+    AcceptsCard: "no",
+    Wifi: "no",
+    Delivery: "yes",
+    Address: "SHop no. 65 5th street",
+    edit: false
   };
+
+  toggleEdit=()=> {
+    this.setState({ edit: !this.state.edit });
+  }
 
   render() {
     return (
       <div className="container">
-        <Card >
+        <Card>
           <CardHeader>
             <div className="heading-color">
               <h2 className="text-center">Raheem Store, Allama Iqbal Town</h2>
             </div>
           </CardHeader>
           <CardBody>
-            <Button btn-primary>
-              Edit Details
-            </Button>
-<Row>
-<Col xs="6">
-<div>Store Type</div>
-<div>Contact</div>
-<div >Opening Time</div>
-<div>Closing Time</div>
-<div>Opens on Weekend</div>
-<div>Accepts Credit Card</div>
-<div>Wifi</div>
-<div>Delivery</div>
-<div>Address</div>
+            
 
-</Col>
-<Col xs="6">
-<div>{this.state.StoreType}</div>
-<div>{this.state.Contact}</div>
-<div>{this.state.OpeningTime}</div>
-<div>{this.state.ClosingTime}</div>
-<div>{this.state.OpensonWeekend}</div>
-<div>{this.state.Wifi}</div>
-<div>{this.state.Delivery}</div>
-<div>{this.state.AcceptsCard}</div>
-<div>{this.state.Address}</div>
-
-
-
-
-</Col>
-</Row>
+            {this.state.edit && 
+            <div>
+              <Button btn-primary onClick={this.toggleEdit}>Save Details</Button>
+            <form>
+              <label>enter info</label>
+              <input type="text"></input>
+            </form>
+            </div>
+            }
+            {!this.state.edit &&
+            <div>
+<Button btn-primary onClick={this.toggleEdit}>Edit Details</Button>
+              <Row>
+                <Col xs="6">
+                  <div>Store Type</div>
+                  <div>Contact</div>
+                  <div>Opening Time</div>
+                  <div>Closing Time</div>
+                  <div>Opens on Weekend</div>
+                  <div>Accepts Credit Card</div>
+                  <div>Wifi</div>
+                  <div>Delivery</div>
+                  <div>Address</div>
+                </Col>
+                <Col xs="6">
+                  <div>{this.state.StoreType}</div>
+                  <div>{this.state.Contact}</div>
+                  <div>{this.state.OpeningTime}</div>
+                  <div>{this.state.ClosingTime}</div>
+                  <div>{this.state.OpensonWeekend}</div>
+                  <div>{this.state.Wifi}</div>
+                  <div>{this.state.Delivery}</div>
+                  <div>{this.state.AcceptsCard}</div>
+                  <div>{this.state.Address}</div>
+                </Col>
+              </Row>
+            </div>
+            
+            }
           </CardBody>
         </Card>
-{/* <Card className="mx-6">
+        {/* <Card className="mx-6">
 <CardBody className="p-6">
 <Button btn btn-primary>
 Edit

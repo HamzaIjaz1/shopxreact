@@ -6,7 +6,7 @@ import Reviews from "./Reviews";
 import ViewProduct from "./ViewProducts";
 import AddProduct from "./addProduct";
 import FAQs from "./faq";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import PaneStrap from "./panestrap";
 import "./Posts.css";
 import "./addProduct.css";

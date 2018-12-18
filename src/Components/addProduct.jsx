@@ -75,7 +75,7 @@ class AddProduct extends Component {
                       <img
                         src={uploadImg}
                         style={{ cursor: "pointer" }}
-                        alt="Upload Image"
+                        alt="Upload"
                         className="img-fluid w-25"
                         data-toggle="tooltip"
                         title="Click to upload..."

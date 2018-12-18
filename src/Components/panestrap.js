@@ -6,8 +6,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  NavbarToggler,
+  // DropdownItem,
+  // NavbarToggler,
   Collapse,
   Button
 } from "reactstrap";
@@ -16,6 +16,7 @@ import { NavLink } from "react-router-dom";
 import hamicon from "../Images/hicon.png";
 import logo from "../Images/logo.PNG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import back from "../Images/paneback.png";
 
 
 class PaneStrap extends Component {
@@ -35,8 +36,8 @@ class PaneStrap extends Component {
   }
   render() {
     return (
-      <div>
-                <img src={hamicon} onClick={this.toggleNavbar} id="ham"></img>
+      <div >
+                <img src={hamicon} onClick={this.toggleNavbar} alt="image" id="ham"></img>
 
         <Nav sm="4"
           id="panebar"
@@ -47,6 +48,7 @@ class PaneStrap extends Component {
           align-items-start
           collapse
           mr-auto
+          style={{backgroundImage: 'url('+back+')', height:"100%",margin:0}}
         >
           <Collapse isOpen={!this.state.collapsed} navbar-toggleable-md>
             <NavbarBrand href="/Shop">
