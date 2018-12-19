@@ -3,9 +3,11 @@ import "./viewProduct.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 class ViewProducts extends Component {
+  counter=0;
   state = {
     products: [
       {
+        id:"1",
         Name: "SweatShirt",
         Category: "Clothing",
         Views: "500",
@@ -14,6 +16,7 @@ class ViewProducts extends Component {
         LastUpdated: "1 day ago"
       },
       {
+        id:"2",
         Name: "SweatShirt",
         Category: "Clothing",
         Views: "500",
@@ -22,6 +25,7 @@ class ViewProducts extends Component {
         LastUpdated: "3 days ago"
       },
       {
+        id:"3",
         Name: "SweatShirt",
         Category: "Clothing",
         Views: "500",
@@ -30,6 +34,7 @@ class ViewProducts extends Component {
         LastUpdated: "1 month ago"
       },
       {
+        id:"4",
         Name: "SweatShirt",
         Category: "Clothing",
         Views: "500",
@@ -38,6 +43,7 @@ class ViewProducts extends Component {
         LastUpdated: "5 hours ago"
       },
       {
+        id:"5",
         Name: "SweatShirt",
         Category: "Clothing",
         Views: "500",
@@ -46,6 +52,7 @@ class ViewProducts extends Component {
         LastUpdated: "2 days ago"
       },
       {
+        id:"6",
         Name: "SweatShirt",
         Category: "Clothing",
         Views: "500",
@@ -114,13 +121,13 @@ class ViewProducts extends Component {
               this.state.products.map(element=>(
                 <tr>
                 <a href="?id=1">
-                  <td>1</td>
-                  <td>Sweatshirt</td>
-                  <td>Clothing</td>
-                  <td>50</td>
-                  <td>Public</td>
-                  <td>500 - 700</td>
-                  <td style={this.green}>2 Hours Ago</td>
+                  <td>{element.id}</td>
+                  <td>{element.Name}</td>
+                  <td>{element.Category}</td>
+                  <td>{element.Price}</td>
+                  <td>{element.Views}</td>
+                  <td>{element.Price}</td>
+                  <td style={this.green}>{element.LastUpdated}</td>
                 </a>
               </tr>
               ))
