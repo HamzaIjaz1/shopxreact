@@ -48,11 +48,7 @@ class PaneStrap extends Component {
             align-items-start
             collapse
             mr-auto
-            style={{
-              backgroundImage: "url(" + back + ")",
-              height: "100%",
-              margin: 0
-            }}
+            // style={{background:"red"}}
           >
             <Collapse isOpen={!this.state.collapsed} navbar-toggleable-md>
               <NavbarBrand href="/Shop">
@@ -61,15 +57,15 @@ class PaneStrap extends Component {
               <NavLink to="/Shop">
                 <NavItem>
                   {" "}
-                  <h2>
+                   
                     <FontAwesomeIcon className="AwesomeIcon" icon="store-alt" />
                     Shop
-                  </h2>
+                    
                 </NavItem>
               </NavLink>
               <NavItem>
                 <UncontrolledDropdown>
-                  <h2>
+                   
                     <DropdownToggle nav caret>
                       <FontAwesomeIcon
                         className="AwesomeIcon"
@@ -77,7 +73,7 @@ class PaneStrap extends Component {
                       />
                       Products
                     </DropdownToggle>
-                  </h2>
+                    
 
                   <DropdownMenu>
                     <NavItem>
@@ -91,28 +87,28 @@ class PaneStrap extends Component {
               </NavItem>
               <NavLink to="/Messages">
                 <NavItem>
-                  <h2>
+                   
                     <FontAwesomeIcon className="AwesomeIcon" icon="comments" />
                     Messages
-                  </h2>
+                    
                 </NavItem>
               </NavLink>
 
               <NavLink to="/Posts">
                 <NavItem>
-                  <h2>
+                   
                     <FontAwesomeIcon className="AwesomeIcon" icon="file-alt" />
                     Posts
-                  </h2>
+                    
                 </NavItem>
               </NavLink>
 
               <NavLink to="/Reviews">
                 <NavItem>
-                  <h2>
+                   
                     <FontAwesomeIcon className="AwesomeIcon" icon="star" />
                     Review
-                  </h2>
+                    
                 </NavItem>
               </NavLink>
               {/* <NavItem to="/Promotions">
@@ -121,22 +117,22 @@ class PaneStrap extends Component {
                   </NavItem> */}
               <NavLink to="/FAQs">
                 <NavItem>
-                  <h2>
+                   
                     <FontAwesomeIcon
                       className="AwesomeIcon"
                       icon="question-circle"
                     />
                     FAQ's
-                  </h2>
+                    
                 </NavItem>
               </NavLink>
 
               <NavLink to="/logout">
                 <NavItem>
-                  <h2>
+                   
                     <FontAwesomeIcon icon="sign-out-alt" />
                     Logout
-                  </h2>
+                    
                 </NavItem>
               </NavLink>
             </Collapse>

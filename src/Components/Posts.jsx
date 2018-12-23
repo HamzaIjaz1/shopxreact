@@ -6,7 +6,9 @@ import shopImg from "../Images/img1.jpg";
 import shopImg2 from "../Images/img2.png";
 
 class Posts extends Component {
-  state = {};
+  state = {
+    Description:"somde description"
+  };
   render() {
     return (
       <div class="container">
